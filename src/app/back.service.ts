@@ -25,16 +25,16 @@ export interface ISession{
 })
 
 export class BackService {
-
+  baseUrl = "http://localhost:8080/SecuredTouch/rest/v2";
   constructor(private http:HttpClient) {  
   }
 
   public getCounters():Observable<ICounter>{
-    return this.http.get<ICounter>("http://localhost:8080/SecuredTouch/rest/v2/counters");
+    return this.http.get<ICounter>(this.baseUrl + "/counters");
  
   }
   public getSessions():Observable<[ISession]>{
-    return this.http.get<[ISession]>("http://localhost:8080/SecuredTouch/rest/v2/sessions");
+    return this.http.get<[ISession]>(this.baseUrl + "/sessions");
  
   }
 }
