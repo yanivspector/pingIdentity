@@ -1,28 +1,42 @@
-<div class="card ms-1 rounded-circle" style="width: 9rem;">
-    <div class="card-body text-center">
-        <h5 class="card-title">48</h5>
-        <h6 class="card-subtitle mb-2 text-muted">Threats</h6>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <!-- Threats Session Card -->
+        <div class="card ms-1 rounded-circle d-flex flex-row align-items-center justify-content-center bg-danger text-light border-dark border-2" style="height: 12rem; width: 12rem;">
+            <div class="d-flex flex-column text-center">
+                <h2 class="card-title">{{threats}}</h2>
+                <h6 class="card-subtitle mb-2">Threats</h6>
+            </div>
+        </div>
     </div>
-</div>
-<!-- Total Session Card -->
-<div class="card ms-1 rounded-circle" style="width: 9rem;">
-    <div class="card-body text-center">
-        <h5 class="card-title">250</h5>
-        <h6 class="card-subtitle mb-2 text-muted">Total Sessions</h6>
+    <div class="col">
+    <!-- Total Session Card -->
+      <div class="card ms-1 rounded-circle d-flex flex-row align-items-center justify-content-center bg-primary text-light border-dark border-2" style="height: 12rem; width: 12rem;">
+            <div class="d-flex flex-column text-center">
+                <h2 class="card-title">{{total_sessions}}</h2>
+                <h6 class="card-subtitle mb-2">Total Sessions</h6>
+            </div>
+       </div>
     </div>
+  </div>
+  <div class="row mt-5">
+      <div class="col">
+        <!-- Authenticated Card -->
+        <div class="card ms-1 rounded-circle d-flex flex-row align-items-center justify-content-center bg-success text-light border-dark border-2" style="height: 12rem; width: 12rem;">
+            <div class="d-flex flex-column text-center">
+                <h2 class="card-title">{{authenticated}}</h2>
+                <h6 class="card-subtitle mb-2">Authenticated</h6>
+            </div>
+        </div>
+      </div>
+      <div class="col">
+          <!-- Scored Session Card -->
+        <div class="card ms-1 rounded-circle d-flex flex-row align-items-center justify-content-center text-light border-dark border-2" style="height: 12rem; width: 12rem; background-color: purple;">
+            <div class="d-flex flex-column text-center">
+                <h2 class="card-title">{{scored_sessions}}</h2>
+                <h6 class=" mb-2">Scored Sessions</h6>
+            </div>
+        </div>
+      </div>
+  </div>
 </div>
-<!-- Total Session Card -->
-<div class="card ms-1 rounded-circle" style="width: 9rem;">
-    <div class="card-body text-center">
-        <h5 class="card-title">150</h5>
-        <h6 class="card-subtitle mb-2 text-muted">Authenticated</h6>
-    </div>
-</div>
-<!-- Total Session Card -->
-<div class="card ms-1 rounded-circle" style="width: 9rem;">
-    <div class="card-body text-center">
-        <h5 class="card-title">75</h5>
-        <h6 class="card-subtitle mb-2 text-muted">Scored Sessions</h6>
-    </div>
-</div>
-
