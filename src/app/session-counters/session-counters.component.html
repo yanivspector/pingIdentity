@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col">
       <!-- Threats Session Card -->
-        <div class="card ms-1 rounded-circle d-flex flex-row align-items-center justify-content-center bg-danger text-light border-dark border-2" style="height: 12rem; width: 12rem;">
+        <div class="card ms-1 rounded-circle d-flex flex-row align-items-center justify-content-center bg-danger text-light border-dark border-2" style="height: 9rem; width: 9rem;">
             <div class="d-flex flex-column text-center">
                 <h2 class="card-title">{{threats}}</h2>
                 <h6 class="card-subtitle mb-2">Threats</h6>
@@ -11,7 +11,7 @@
     </div>
     <div class="col">
     <!-- Total Session Card -->
-      <div class="card ms-1 rounded-circle d-flex flex-row align-items-center justify-content-center bg-primary text-light border-dark border-2" style="height: 12rem; width: 12rem;">
+      <div class="card ms-1 rounded-circle d-flex flex-row align-items-center justify-content-center bg-primary text-light border-dark border-2" style="height: 9rem; width: 9rem;">
             <div class="d-flex flex-column text-center">
                 <h2 class="card-title">{{total_sessions}}</h2>
                 <h6 class="card-subtitle mb-2">Total Sessions</h6>
@@ -19,10 +19,15 @@
        </div>
     </div>
   </div>
+  <div class="row" style="margin-right: 30%;">
+    <div class="col">
+      <app-doughnut [threat_perc]="percentage_threats"  [scored_perc]="percentage_scored" [authenticated_perc]="percentage_auth"></app-doughnut>
+    </div> 
+  </div>
   <div class="row mt-5">
       <div class="col">
         <!-- Authenticated Card -->
-        <div class="card ms-1 rounded-circle d-flex flex-row align-items-center justify-content-center bg-success text-light border-dark border-2" style="height: 12rem; width: 12rem;">
+        <div class="card ms-1 rounded-circle d-flex flex-row align-items-center justify-content-center bg-success text-light border-dark border-2" style="height: 9rem; width: 9rem;">
             <div class="d-flex flex-column text-center">
                 <h2 class="card-title">{{authenticated}}</h2>
                 <h6 class="card-subtitle mb-2">Authenticated</h6>
@@ -31,7 +36,7 @@
       </div>
       <div class="col">
           <!-- Scored Session Card -->
-        <div class="card ms-1 rounded-circle d-flex flex-row align-items-center justify-content-center text-light border-dark border-2" style="height: 12rem; width: 12rem; background-color: purple;">
+        <div class="card ms-1 rounded-circle d-flex flex-row align-items-center justify-content-center text-light border-dark border-2" style="height: 9rem; width: 9rem; background-color: purple;">
             <div class="d-flex flex-column text-center">
                 <h2 class="card-title">{{scored_sessions}}</h2>
                 <h6 class=" mb-2">Scored Sessions</h6>
