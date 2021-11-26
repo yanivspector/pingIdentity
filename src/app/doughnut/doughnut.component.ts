@@ -21,33 +21,32 @@ export class DoughnutComponent implements OnInit{
   public labelContent(e: any): string {
     return e.category;
   }
-  ngOnInit(): void {
+
+  public _reload = true;
+
+  private reload() {
+      setTimeout(() => this._reload = false);
+      setTimeout(() => this._reload = true);
   }
-   ngOnChanges(changes:SimpleChanges){
-     this.data[0].share = this.threat_perc;
-     this.data[1].share = this.authenticated_perc;
-     this.data[2].share = this.scored_perc;
-     this.ngOnInit();
-    //console.log(
-    // this.threat_perc = changes["threat_perc"].currentValue;
-    // this.authenticated_perc = changes["authenticated_perc"].currentValue;
-    // this.scored_perc = changes["scored_perc"].currentValue;
+
+  ngOnChanges(changes:SimpleChanges){  
+    this.ngOnInit();
+    this.reload();
+  }
+  ngOnInit(): void {
+    this.data[0].share = this.threat_perc;
+    this.data[1].share = this.authenticated_perc;
+    this.data[2].share = this.scored_perc;
     console.log("_____"+this.authenticated_perc);
     console.log("======"+this.threat_perc);
-    console.log("++++"+this.scored_perc);
-    // this.authenticated_perc=
-    // this.scored_perc = 
-    // for (const propName in changes) {
-    //   const chng = changes[propName];
-    //   const cur  = JSON.stringify(chng.currentValue);
-
-    //   console.log(propName +"-->"+chng.currentValue);
-    //}
-
-    //  console.log(changes["scored_perc"]);
-    //  console.log(changes["authenticated_perc"]);
-   }
+    console.log("++++"+this.scored_perc);   
+  }
+   
 
 }
 
+
+function ngOnChanges(changes: any, SimpleChanges: any) {
+  throw new Error('Function not implemented.');
+}
 
